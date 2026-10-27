@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mc_engine"
+version = "0.1.0"
+description = "Monte Carlo pricing & risk engine (teaching project)"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy",
+    "scipy",
+    "numba",
+    "pandas",
+    "matplotlib",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[tool.setuptools.packages.find]
+include = ["mc_engine*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]  # lets `pytest` import mc_engine without installing it first
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
