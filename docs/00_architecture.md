@@ -24,7 +24,7 @@ new model instantly lets you price every existing product under it.
 
 ### 2.1 The price we want
 
-Option pricing theory (which we derive in Chapter 02) says the fair price today is
+Option pricing theory (which we derive in Chapter 01) says the fair price today is
 
 $$
 V_0 = e^{-rT}\,\mathbb{E}^{\mathbb{Q}}\big[\,g(S)\,\big]
@@ -138,7 +138,7 @@ The pieces only talk through **NumPy arrays of fixed shape**. That's the whole t
   `PricingResult.from_samples`.
 
 Because a payoff only sees an array, a call-option payoff written for GBM works
-unchanged on Heston paths. (The exact function signatures get built in Chapter 02.)
+unchanged on Heston paths. (The exact function signatures get built in Chapter 03.)
 
 ### 3.2 Folder map
 
